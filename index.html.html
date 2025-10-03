@@ -1,0 +1,285 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abhinav Aman — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#7c3aed; --glass: rgba(255,255,255,0.04);
+      --radius:14px; --max-width:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;}
+    body{
+      margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial; background:linear-gradient(180deg,#071021 0%, #071425 60%); color:#e6eef8; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+    .container{max-width:var(--max-width); margin:0 auto; padding:32px;}
+    header{position:sticky; top:12px; z-index:40; backdrop-filter: blur(6px);}
+    .nav{display:flex; gap:16px; align-items:center; justify-content:space-between; background:transparent; padding:8px 12px;}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#5b21b6);display:flex;align-items:center;justify-content:center;font-weight:700}
+    nav ul{display:flex;gap:12px;list-style:none;padding:0;margin:0}
+    nav a{color:var(--muted); text-decoration:none; padding:8px 12px;border-radius:10px}
+    nav a.active, nav a:hover{background:var(--glass); color:#fff}
+    .hero{min-height:72vh;display:grid;grid-template-columns:1fr 380px;gap:32px;align-items:center;padding-top:24px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:var(--radius); padding:24px; box-shadow:0 6px 30px rgba(2,6,23,0.6);}
+    .hero-left h1{font-size: clamp(28px,4vw,44px); margin:0 0 8px}
+    .lead{color:var(--muted); margin-bottom:18px}
+    .cta{display:flex;gap:12px}
+    .btn{background:var(--accent); color:white; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:600; box-shadow:0 6px 18px rgba(124,58,237,0.16)}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06); color:var(--muted)}
+    /* Skills */
+    .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .skill{padding:10px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));}
+    .skill .meta{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:8px}
+    .bar{height:10px;background:rgba(255,255,255,0.03);border-radius:999px;overflow:hidden}
+    .bar > i{display:block;height:100%;width:0%;border-radius:999px;background:linear-gradient(90deg,var(--accent),#06b6d4)}
+    /* Projects */
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .proj{padding:16px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));min-height:160px;display:flex;flex-direction:column;justify-content:space-between}
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;padding:6px 8px;border-radius:999px;background:#051226;color:var(--muted)}
+    /* Contact */
+    form{display:grid;gap:12px}
+    input, textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:10px;color:inherit}
+    textarea{min-height:120px;resize:vertical}
+    footer{padding:24px 0;text-align:center;color:var(--muted)}
+    /* Responsive */
+    @media (max-width:880px){.hero{grid-template-columns:1fr;}.container{padding:18px}}
+
+    /* small helper classes */
+    .muted{color:var(--muted)}
+    .grid-two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .center{text-align:center}
+  </style>
+</head>
+<body>
+  <header class="container">
+    <div class="nav">
+      <div class="brand">
+        <div class="logo">YA</div>
+        <div>
+          <div style="font-weight:700">Abhinav Aman</div>
+          <div class="muted" style="font-size:12px">Frontend Developer • Open-source enthusiast</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left card">
+        <h1>Hi, I'm Abhinav Aman — I build delightful web experiences.</h1>
+        <p class="lead">I focus on modern front-end development, interactive UI and delightful UX. I love turning ideas into polished, high-performance websites and apps.</p>
+        <div class="cta">
+          <a class="btn" href="#projects">See projects</a>
+          <a class="btn ghost" href="#contact">Hire me</a>
+        </div>
+        <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+          <div class="card-muted card" style="display:flex;gap:12px;align-items:center">
+            <div style="font-weight:700;font-size:18px">1+</div>
+            <div class="muted" style="font-size:13px">Years experience</div>
+          </div>
+          <div class="card-muted card" style="display:flex;gap:12px;align-items:center">
+            <div style="font-weight:700;font-size:18px">2+</div>
+            <div class="muted" style="font-size:13px">Projects shipped</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card" style="height:fit-content">
+        <h3 style="margin-top:0">Quick contact</h3>
+        <p class="muted">Available for freelance & full-time roles.</p>
+        <div style="display:flex;gap:8px;margin-top:12px;flex-direction:column">
+          <div class="muted" style="font-size:13px">Location</div>
+          <div>Varansi,India</div>
+          <div class="muted" style="font-size:13px;margin-top:8px">Email</div>
+          <div><a href="mailto:your.email@domain.com" style="color:inherit;text-decoration:none">5abhinavaman@gmail.com</a></div>
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <a class="btn ghost" href="#contact">Message</a>
+            <a class="btn" href="#projects">Portfolio</a>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="about" style="margin-top:40px">
+      <div class="card">
+        <h2>About Me</h2>
+        <p class="muted">I'm a front-end developer who enjoys building accessible, responsive, and animated interfaces. My interests include performance optimization, design systems, and small but effective micro-interactions.</p>
+        <div style="margin-top:12px;display:flex;gap:12px;flex-wrap:wrap">
+          <div class="tag">JavaScript</div>
+          <div class="tag">React</div>
+          <div class="tag">HTML</div>
+          <div class="tag">CSS</div>
+          <div class="tag">GSAP</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" style="margin-top:28px">
+      <h2>Skills</h2>
+      <div class="skills-grid" style="margin-top:12px">
+        <div class="skill card">
+          <div class="meta"><strong>JavaScript</strong><span class="muted">90%</span></div>
+          <div class="bar"><i data-width="90%"></i></div>
+        </div>
+        <div class="skill card">
+          <div class="meta"><strong>React</strong><span class="muted">85%</span></div>
+          <div class="bar"><i data-width="85%"></i></div>
+        </div>
+        <div class="skill card">
+          <div class="meta"><strong>HTML & CSS</strong><span class="muted">95%</span></div>
+          <div class="bar"><i data-width="95%"></i></div>
+        </div>
+        <div class="skill card">
+          <div class="meta"><strong>Node & Tools</strong><span class="muted">75%</span></div>
+          <div class="bar"><i data-width="75%"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" style="margin-top:28px">
+      <h2>Projects</h2>
+      <div class="projects-grid" style="margin-top:12px">
+        <!-- Project card template: update with your projects -->
+        <article class="proj card">
+          <div>
+            <h3>Interactive Portfolio</h3>
+            <p class="muted">A polished portfolio with scroll animations and smooth transitions.</p>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+            <div class="tags"><span class="tag">HTML</span><span class="tag">GSAP</span></div>
+            <div style="display:flex;gap:8px">
+              <a href="#" class="btn ghost" aria-label="Live demo">Demo</a>
+              <a href="#" class="btn" aria-label="Source code">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj card">
+          <div>
+            <h3>Task Manager App</h3>
+            <p class="muted">A small React app demonstrating state management and localStorage persistence.</p>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+            <div class="tags"><span class="tag">React</span><span class="tag">LocalStorage</span></div>
+            <div style="display:flex;gap:8px">
+              <a href="#" class="btn ghost">Demo</a>
+              <a href="#" class="btn">Code</a>
+            </div>
+          </div>
+        </article>
+
+        
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:28px">
+      <h2>Contact</h2>
+      <div class="grid-two" style="margin-top:12px">
+        <div class="card">
+          <h3>Let's build something</h3>
+          <p class="muted">Share a short brief and I'll reply within a few days.</p>
+          <ul class="muted" style="margin-top:12px">
+            <li>Open to remote work</li>
+            <li>Available for freelance</li>
+            <li>Prefer projects using React / TypeScript</li>
+          </ul>
+        </div>
+        <div class="card">
+          <form id="contactForm">
+            <input placeholder="Your name" id="name" required />
+            <input placeholder="Your email" id="email" type="email" required />
+            <textarea placeholder="Message" id="message" required></textarea>
+            <button class="btn" type="submit">Send message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer style="margin-top:28px">
+      <div class="muted">Made with ❤️ — Abhinav Aman • <span id="year"></span></div>
+    </footer>
+  </main>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="" crossorigin="anonymous"></script>
+
+  <script>
+    // small helper: smooth scroll for nav links
+    document.querySelectorAll('.nav-link').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault(); document.querySelectorAll('.nav-link').forEach(x=>x.classList.remove('active'));
+        a.classList.add('active');
+        const id = a.getAttribute('href');
+        document.querySelector(id).scrollIntoView({behavior:'smooth', block:'start'});
+      })
+    })
+
+    // fill year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function animateSkillBars(){
+      document.querySelectorAll('.bar > i').forEach(el=>{
+        const w = el.getAttribute('data-width') || '60%';
+        el.style.width = '0%';
+        setTimeout(()=>{ el.style.transition = 'width 900ms cubic-bezier(.2,.9,.2,1)'; el.style.width = w; }, 200);
+      })
+    }
+    animateSkillBars();
+
+    
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const msg = document.getElementById('message').value.trim();
+      if(!name||!email||!msg){alert('Please fill all fields');return}
+      // fallback: open mail client
+      const subject = encodeURIComponent('Portfolio contact from ' + name);
+      const body = encodeURIComponent(msg + '\n\n' + name + '\n' + email);
+      window.location.href = `mailto:5abhinavaman@gmail.com?subject=${subject}&body=${body}`;
+    })
+
+    // if GSAP available, add scroll-triggered fades
+    if(window.gsap){
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.utils.toArray('section, .proj, .card').forEach((el, i)=>{
+        gsap.from(el, {
+          y: 24, opacity:0, duration:0.8, delay: i*0.06,
+          scrollTrigger:{trigger:el, start:'top 85%'}
+        })
+      })
+      // subtle parallax on hero
+      gsap.to('.hero-left', {y: -20, ease:'none', scrollTrigger:{trigger:'.hero', scrub:0.6}})
+    }
+
+    // set active nav on scroll
+    const sections = Array.from(document.querySelectorAll('main section[id]'));
+    const setActiveFromScroll = ()=>{
+      const mid = window.scrollY + (window.innerHeight/2);
+      let active = sections.find(s=>{ const r = s.getBoundingClientRect(); const top = r.top + window.scrollY; return mid >= top; });
+      if(active){ document.querySelectorAll('.nav-link').forEach(a=>a.classList.toggle('active', a.getAttribute('href') === '#' + active.id)); }
+    }
+    window.addEventListener('scroll', setActiveFromScroll);
+    setActiveFromScroll();
+  </script>
+</body>
+</html>
